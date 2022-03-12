@@ -24215,7 +24215,9 @@ For more info, visit https://reactjs.org/link/mock-scheduler`);
   var import_react = __toESM(require_react());
   var import_react_dom = __toESM(require_react_dom());
   var App = ({ arg }) => {
-    return /* @__PURE__ */ import_react.default.createElement("div", null, `Hello, ${arg}!`);
+    return /* @__PURE__ */ import_react.default.createElement("h1", {
+      className: "text-3xl font-bold underline"
+    }, "Hello world!");
   };
   document.addEventListener("DOMContentLoaded", () => {
     const rootEl = document.getElementById("root");

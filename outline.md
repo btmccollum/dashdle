@@ -1,0 +1,31 @@
+- Wordle-style game with a twist. You have 6 guesses at a 5 letter word
+	- Twist: starting the game also starts a 2.5 (?) minute timer
+		- After the allotted time the word changes but you keep your progress with a number of letter randomly revealed that match your number of guesses
+
+- Rough thoughts on models needed: 
+	- Game
+		- has one board
+		- has one gameclock
+	- Board
+		- belongs to game
+		- has many guesses
+		- has many words
+	- Guess
+		- belongs to board
+	- Word (Answer)
+		- belongs to board
+		- has many guesses?
+	- GameClock
+		- belongs to game
+
+Flow: 
+	- Game loads on page load, with a start button
+	- When the player clicks start, they are presented with a standard wordle board and game keyboard
+	- Timer is present somewhere on screen
+		- Flashes at 1min/ 30sec / 10sec countdown
+	- Player has 6 guesses to get the word in time
+	- If the player doesn’t get the word in time, a new word is fetched
+		- a random number of letters are revealed on the new word according to how many correct letters they have 
+		- player keeps the same number of remaining guesses
+		- rows are erased and the number of rows available is now equal to the number of guesses remaining
+	- Keyboard should work like wordle’s, correct guesses are highlighted, correct guesses in the wrong spot are highlighted in a diff color, incorrect guesses are greyed out

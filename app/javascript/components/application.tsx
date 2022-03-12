@@ -6,7 +6,12 @@ interface AppProps {
 }
 
 const App = ({ arg }: AppProps) => {
-  return <div>{`Hello, ${arg}!`}</div>;
+  // return <div>{`Hello, ${arg}!`}</div>;
+  return (
+    <h1 className="text-3xl font-bold underline">
+      Hello world!
+    </h1>
+  );
 };
 
 document.addEventListener("DOMContentLoaded", () => {
