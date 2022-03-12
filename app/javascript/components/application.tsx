@@ -5,17 +5,18 @@ interface AppProps {
   arg: string;
 }
 
-const App = ({ arg }: AppProps) => {
-  // return <div>{`Hello, ${arg}!`}</div>;
+function App({ arg }: AppProps) {
   return (
     <h1 className="text-3xl font-bold underline">
-      Hello world!
+      Hello
+      {' '}
+      {arg}
+      !
     </h1>
   );
-};
+}
 
-document.addEventListener("DOMContentLoaded", () => {
-  const rootEl = document.getElementById("root");
-  ReactDOM.render(<App arg="Rails 7 with ESBuild" />, rootEl);
+document.addEventListener('DOMContentLoaded', () => {
+  const rootEl = document.getElementById('root');
+  ReactDOM.render(<App arg="World" />, rootEl);
 });
-

@@ -24214,15 +24214,15 @@ For more info, visit https://reactjs.org/link/mock-scheduler`);
   // app/javascript/components/application.tsx
   var import_react = __toESM(require_react());
   var import_react_dom = __toESM(require_react_dom());
-  var App = ({ arg }) => {
+  function App({ arg }) {
     return /* @__PURE__ */ import_react.default.createElement("h1", {
       className: "text-3xl font-bold underline"
-    }, "Hello world!");
-  };
+    }, "Hello", " ", arg, "!");
+  }
   document.addEventListener("DOMContentLoaded", () => {
     const rootEl = document.getElementById("root");
     import_react_dom.default.render(/* @__PURE__ */ import_react.default.createElement(App, {
-      arg: "Rails 7 with ESBuild"
+      arg: "World"
     }), rootEl);
   });
 })();
